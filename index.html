@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+    <!-- Descrição do seu site -->
+    <meta name="description" content="Photon Game - Seu jogo online com multiplayer em tempo real. Desenvolva jogos incríveis com a tecnologia Photon Engine.">
+    <!-- Palavras-chave originais -->
+    <meta name="keywords" content="palavra-chave1, palavra-chave2, palavra-chave3">
+    <!-- Novas palavras-chave -->
+    <meta name="keywords" content="PhotonGame, JogoOnline, DesenvolvimentoDeJogos, RedeMultiplayer, JogoEmTempoReal, GameDev, JogoDeAção, JogoDeTiro, Competitivo, JogoDePlataforma, Cooperação, AventuraOnline, EstratégiaOnline, MMORPG, Sobrevivência, JogoDeFísica, JogoDeQuebra-Cabeça, PersonalizaçãoDePersonagens">
+    <title>Photon game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .game-title {
+            display: flex;
+            align-items: center;
+        }
+        .game-title img {
+            width: 112px;
+            height: 112px;
+            margin-right: 20px;
+        }
+        .game-title h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .game-subtitle {
+            color: gray;
+            cursor: pointer;
+        }
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .game-info .details {
+            flex: 1;
+        }
+        .game-info .details p {
+            margin: 5px 0;
+        }
+        .game-info .download {
+            text-align: center;
+        }
+        .game-info .download button {
+            background-color: #1a73e8;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .game-images {
+            display: flex;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .game-images img {
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 15px;
+        }
+        .game-description, .review-section {
+            margin-top: 20px;
+        }
+        .review {
+            border: 2px solid yellow;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            animation: changeColor 3s infinite;
+        }
+        .review p {
+            margin: 5px 0;
+        }
+        .review strong {
+            color: #1a73e8;
+        }
+        .stars {
+            color: #ffca28;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            background-color: #1f1f1f;
+        }
+        .footer a {
+            color: gray;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .game-list {
+            display: none;
+            margin-top: 20px;
+        }
+        .game-list .game-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .game-list .game-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .game-list .game-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        @keyframes changeColor {
+            0% {
+                border-color: yellow;
+            }
+            33% {
+                border-color: green;
+            }
+            66% {
+                border-color: blue;
+            }
+            100% {
+                border-color: red;
+            }
+        }
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea, form select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #1a73e8;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Pesquisar...">
+    <button type="button" onclick="searchFunction()">Pesquisar</button>
+</div>
+
+<style>
+    .search-container {
+        display: flex;
+        align-items: center;
+        max-width: 400px;
+        margin: 20px auto;
+        border: 2px solid #0088cc; /* Cor azul para a borda */
+        border-radius: 25px; /* Borda arredondada */
+        overflow: hidden;
+    }
+    .search-container input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+        background-color: transparent; /* Fundo transparente */
+        color: #333; /* Cor do texto */
+    }
+    .search-container button {
+        padding: 10px 20px;
+        background-color: #0088cc; /* Cor de fundo azul */
+        color: white; /* Cor do texto branco */
+        border: none;
+        border-radius: 0 25px 25px 0; /* Borda arredondada apenas no lado direito */
+        cursor: pointer;
+    }
+    .search-container button:hover {
+        background-color: #005580; /* Cor de fundo azul mais escura ao passar o mouse */
+    }
+</style>
+
+<script>
+    function searchFunction() {
+        var input = document.getElementById("searchInput").value;
+        // Aqui você pode adicionar a lógica para o que acontece quando o usuário faz uma pesquisa
+        alert("Você pesquisou por: " + input);
+    }
+</script>
+<div class="container">
+    <div class="game-title">
+        <img src="img1.jpg" alt="Photon Game">
+        <div>
+            <h1>Photon Game</h1>
+            <p class="game-subtitle"><a href="amber_game_download.html" style="color: gray; text-decoration: none;">Developer Studio</a></p>
+        </div>
+    </div>
+    <div class="game-info">
+        <div class="details">
+            <p>Cassino</p>
+            <p>Classificação: 4,9 ★</p>
+            <p>25,2 mil avaliações</p>
+            <p>100 mil+ Downloads</p>
+            <p>Classificação 18 anos</p>
+        </div>
+        <div class="download">
+            <a href="https://photonrise.com/?g=1011385&c=1" download>
+                <button>Instalar</button>
+            </a>
+            <p>53 MB</p>
+        </div>
+    </div>
+    <div class="game-images">
+        <img src="img11.jpg" alt="Screenshot 1">
+        <img src="img11.jpg" alt="Screenshot 2">
+        <img src="img333.png" alt="Screenshot 3">
+        <img src="img332.png" alt="Screenshot 4">
+        <img src="img331.png" alt="Screenshot 5">
+    </div>
+
+    <div class="game-description">
+        <h2>Sobre este jogo</h2>
+        <p>Photon Game é um jogo de cassino muito legal e divertido! Envolva-se em partidas emocionantes e imprevisíveis. Colete e melhore personagens variados, explore diferentes modos de jogo e divirta-se com amigos e familiares!</p><div class="review-section">
+    <h2>Classificações e resenhas</h2>
+
+    <div class="review">
+        <p><strong>Caio Monteiro</strong> - May 30, 2024</p>
+        <p class="stars">★★★★★</p>
+        <p>Great game! It’s fun and has unique gameplay, but there are some issues with the progression system. The chest tickets are few and take a long time to recharge.</p>
+        <p>This review was marked as helpful by 227 people</p>
+    </div>
+    <div class="review">
+        <p><strong>Welington Ramos</strong> - May 30, 2024</p>
+        <p class="stars">★★★★☆</p>
+        <p>The latest games from Developer Studio have been quite "meh", but this one is amazing! Graphics and designs are excellent, and gameplay is easy.</p>
+        <p>This review was marked as helpful by 202 people</p>
+    </div>
+    <div class="review hidden">
+        <p><strong>rafitass</strong> - May 30, 2024</p>
+        <p class="stars">★★★★☆</p>
+        <p>The game is incredible! Very well made and optimized. However, I had issues connecting with mobile data and had to switch to Wi-Fi.</p>
+        <p>This review was marked as helpful by 3 people</p>
+    </div>
+    <div class="review hidden">
+        <p><strong>Carlos Pereira</strong> - May 27, 2024</p>
+        <p class="stars">★★★★★</p>
+        <p>Amazing game! Highly recommend it to everyone.</p>
+        <p>This review was marked as helpful by 50 people</p>
+    </div>
+    <div class="review hidden">
+        <p><strong>Luiz Santos</strong> - May 25, 2024</p>
+        <p class="stars">★★★★☆</p>
+        <p>Great game overall, but it crashes sometimes.</p>
+        <p>This review was marked as helpful by 15 people</p>
+    </div>
+
+    <button id="showMoreButton" class="show-more-button" onclick="showMoreReviews()">Ver todas as avaliações</button>
+    <button id="hideButton" class="show-more-button hidden" onclick="hideReviews()">Ocultar avaliações</button>
+</div>
+
+<script>
+    function showMoreReviews() {
+        const hiddenReviews = document.querySelectorAll('.review.hidden');
+        hiddenReviews.forEach(review => review.classList.remove('hidden'));
+        document.getElementById('showMoreButton').style.display = 'none';
+        document.getElementById('hideButton').style.display = 'block';
+    }
+
+    function hideReviews() {
+        const allReviews = document.querySelectorAll('.review');
+        allReviews.forEach((review, index) => {
+            if (index >= 2) review.classList.add('hidden');
+        });
+        document.getElementById('showMoreButton').style.display = 'block';
+        document.getElementById('hideButton').style.display = 'none';
+    }
+</script>
+
+<style>
+    .review-section { margin: 20px; }
+    .review { border-bottom: 1px solid #ccc; padding: 10px 0; }
+    .stars { color: gold; }
+    .hidden { display: none; }
+    .show-more-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .show-more-button:hover {
+        background-color: #45a049;
+    }
+</style>
+    </div>
+        <div id="new-reviews">
+            <!-- New reviews will appear here -->
+        </div>
+
+        <form id="review-form">
+            <h3>Deixe sua Avaliação</h3>
+            <input type="text" id="name" placeholder="Seu nome" required>
+            <select id="rating" required>
+                <option value="">Selecione a avaliação</option>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+            </select>
+            <textarea id="comment" rows="4" placeholder="Escreva sua avaliação" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</div>
+  <div class="related-games">
+    <h2>Jogos semelhantes</h2>
+    <div class="game-item">
+        <a href="https://ambercnt.com/?g=116438037&c=2" target="_blank">
+            <img src="img1900.png" alt="Game 1">
+            <p>Amber Game 1</p>
+        </a>
+    </div>
+    <div class="game-item">
+        <a href="https://example.com/game2" target="_blank">
+            <img src="img_game2.jpg" alt="Game 2">
+            <p>Game 2</p>
+        </a>
+    </div>
+    <div class="game-item">
+        <a href="https://example.com/game3" target="_blank">
+            <img src="img_game3.jpg" alt="Game 3">
+            <p>Game 3</p>
+        </a>
+    </div>
+</div>
+
+<style>
+.related-games {
+    margin-top: 20px;
+}
+.related-games h2 {
+    font-size: 24px;
+    color: white;
+}
+.related-games .game-item {
+    display: inline-block;
+    width: 30%;
+    margin-right: 10px;
+    text-align: center;
+}
+.related-games .game-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.related-games .game-item p {
+    margin: 10px 0;
+    color: white;
+    font-size: 18px;
+}
+</style>
+
+<script>
+    document.getElementById('review-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const rating = document.getElementById('rating').value;
+        const comment = document.getElementById('comment').value;
+        
+        const reviewSection = document.getElementById('new-reviews');
+        
+        const newReview = document.createElement('div');
+        newReview.classList.add('review');
+        
+        const date = new Date().toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric'
+        });
+
+        newReview.innerHTML = `
+            <p><strong>${name}</strong> - ${date}</p>
+            <p class="stars">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</p>
+            <p>${comment}</p>
+            <p>Esta avaliação ainda não foi marcada como útil</p>
+        `;
+        
+        reviewSection.appendChild(newReview);
+        
+        document.getElementById('review-form').reset();
+    });
+</script>
+<div class="telegram-support">
+    <h3 style="color: white;">Canal de Atendimento no Telegram</h3>
+    <p style="color: white;">Para suporte rápido e direto, junte-se ao nosso canal de atendimento no Telegram.</p>
+    <a href="https://t.me/photon4567" target="_blank" class="telegram-link">Entrar no Canal de Atendimento</a>
+</div>
+
+<style>
+    .telegram-support {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #0088cc; /* Cor de fundo azul */
+        border-radius: 8px;
+        text-align: center;
+    }
+    .telegram-support h3, .telegram-support p {
+        color: white; /* Letras brancas */
+    }
+    .telegram-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #0077b3; /* Cor de fundo azul mais escura */
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .telegram-link:hover {
+        background-color: #005580; /* Cor de fundo azul mais escura ao passar o mouse */
+    }
+</style>
+</body>
+</html>

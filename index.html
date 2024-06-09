@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photon Game - Developer Studio</title>
+    <title>Opinião premiada (Beta) - Developer Studio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,16 +60,16 @@
         .game-images {
             display: flex;
             overflow-x: auto;
-            margin: 20px 0;
+            margin: 10px 0;
         }
         .game-images img {
-            width: 300px;
+            width: 260px;
             height: auto;
-            margin-right: 20px;
-            border-radius: 15px;
+            margin-right: 10px;
+            border-radius: 25px;
         }
         .game-description, .review-section {
-            margin-top: 20px;
+            margin-top: 90px;
         }
         .review {
             border: 2px solid yellow;
@@ -150,14 +150,37 @@
             color: white;
             cursor: pointer;
         }
+        #politicasPrivacidade {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    background-color: gray;
+    border: 2px solid #white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#politicasPrivacidade:hover {
+    background-color: black;
+}
+#descricaoCompleta {
+    display: none;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#lerMais {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
-    
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Pesquisar...">
-    <button type="button" onclick="searchFunction()">Pesquisar</button>
-</div>
 
 <style>
     .search-container {
@@ -188,6 +211,54 @@
     .search-container button:hover {
         background-color: #005580; /* Cor de fundo azul mais escura ao passar o mouse */
     }
+    /* Estilo para o botão de instalação */
+.download {
+    position: absolute;
+    top: 120px; /* Ajustado para ficar na altura da classificação */
+    right: 20px;
+}
+
+#baixarApk {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#baixarApk:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para a mensagem de confirmação */
+.confirmacao-download {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#confirmarDownload, #cancelarDownload {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+#confirmarDownload:hover, #cancelarDownload:hover {
+    background-color: #45a049;
+}
 </style>
 
 <script>
@@ -199,75 +270,107 @@
 </script>
 <div class="container">
     <div class="game-title">
-        <img src="img1.jpg" alt="Photon Game">
+        <img src="imgppps.jpg" alt="Opinião premiada">
         <div>
-            <h1>Photon Game</h1>
-            <p class="game-subtitle"><a href="amber_game_download.html" style="color: gray; text-decoration: none;">Developer Studio</a></p>
+            <h1>Opinião premiada</h1>
+            <p class="game-subtitle"><a href="amber_game_download.html" style="color: gray; text-decoration: none;">Gem pesquisa IO</a></p>
         </div>
+    </div><div class="game-info"><div class="game-info">
+    <div class="details">
+        <p>Renda</p>
+        <p>Classificação: 4,8 ★</p>
+        <p>30 avaliações</p>
+        <p>10 mil+ Downloads</p>
+        <p>Classificação 18 anos</p>
+        <p>12 MB</p>
     </div>
-    <div class="game-info">
-        <div class="details">
-            <p>Cassino</p>
-            <p>Classificação: 4,9 ★</p>
-            <p>25,2 mil avaliações</p>
-            <p>100 mil+ Downloads</p>
-            <p>Classificação 18 anos</p>
-        </div>
-        <div class="download">
-            <a href="https://photonrise.com/?g=1011385&c=1" download>
-                <button>Instalar</button>
-            </a>
-            <p>53 MB</p>
+    <div class="download">
+        <button id="baixarApk">Instalar</button>
+    </div>
+</div>
+
+<script>
+document.getElementById("baixarApk").addEventListener("click", function() {
+    var arquivoApk = "OpiniãoPremiada-3.apk"; // Substitua "opiniao_premiada.apk" pelo nome do seu arquivo APK
+    var tamanhoArquivo = "12 MB"; // Tamanho do arquivo APK
+    var fornecedor = "Opinião Premiada"; // Fornecedor do aplicativo
+
+    // Exibir mensagem de confirmação
+    if (confirm("Deseja baixar e instalar o aplicativo " + fornecedor + "?\n\nNome do arquivo: " + arquivoApk + "\nTamanho: " + tamanhoArquivo)) {
+        // Redirecionar para o arquivo APK
+        window.location.href = arquivoApk;
+    }
+});
+</script>
+    
+ 
+        
         </div>
     </div>
     <div class="game-images">
-        <img src="img11.jpg" alt="Screenshot 1">
-        <img src="img11.jpg" alt="Screenshot 2">
-        <img src="img333.png" alt="Screenshot 3">
-        <img src="img332.png" alt="Screenshot 4">
-        <img src="img331.png" alt="Screenshot 5">
+        <img src="img4.jpg" alt="Screenshot 1">
+        <img src="img1.jpg" alt="Screenshot 2">
+        <img src="img5.jpg" alt="Screenshot 3">
+        <img src="img3.jpg" alt="Screenshot 4">
+        <img src="img2.jpg" alt="Screenshot 5">
     </div>
+<div class="game-description">
+    <h2>Sobre o Opinião Premiada</h2>
+    <p><div id="descricaoResumida">
+    <h1>Opinião Premiada - Ganhe Dinheiro com Suas Opiniões!</h1>
+    <p>Descubra o poder da sua opinião com o Opinião Premiada! Participe de pesquisas exclusivas e seja recompensado com dinheiro por suas respostas. É simples, rápido e seguro. Sua opinião vale muito!</p>
+    <p><strong>Destaques do Opinião Premiada:</strong></p>
+    <ul>
+        <li><strong>Recompensas em Dinheiro:</strong> Responda pesquisas e acumule recompensas em dinheiro.</li>
+        <li><strong>Pesquisas Exclusivas:</strong> Acesse pesquisas personalizadas de acordo com o seu perfil.</li>
+        <li><strong>Fácil de Usar:</strong> Interface intuitiva e simples para você participar sem complicações.</li>
+        <li><strong>Segurança:</strong> Seus dados são protegidos e tratados com total confidencialidade.</li>
+    </ul>
+    <p>Faça parte da nossa comunidade e transforme suas opiniões em dinheiro. Baixe agora o Opinião Premiada e comece a ganhar recompensas!</</p>
+    <div class="review-section">
+        <h2>Avaliações e resenhas</h2>
 
-    <div class="game-description">
-        <h2>Sobre este jogo</h2>
-        <p>Photon Game é um jogo de cassino muito legal e divertido! Envolva-se em partidas emocionantes e imprevisíveis. Colete e melhore personagens variados, explore diferentes modos de jogo e divirta-se com amigos e familiares!</p><div class="review-section">
-    <h2>Classificações e resenhas</h2>
+        <div class="review">
+            <p><strong>Juliana Lima</strong> - 3 de junho de 2024</p>
+            <p class="stars">★★★★★</p>
+            <p>Excelente aplicativo! Fácil de usar e as recompensas são ótimas. Recomendo para quem quer ganhar prêmios extras nas horas vagas.</p>
+            <p>Esta avaliação foi marcada como útil por 30 pessoas</p>
+            <p><strong>Resposta do desenvolvedor:</strong> Agradecemos seu apoio, Juliana! Estamos felizes em saber que você está aproveitando as recompensas do aplicativo. Continuaremos trabalhando para oferecer a melhor experiência possível aos nossos usuários.</p>
+        </div>
+        <div class="review">
+            <p><strong>Carlos Silva</strong> - 10 de junho de 2024</p>
+            <p class="stars">★★★★☆</p>
+            <p>Ótimo aplicativo! Adoro ganhar recompensas simplesmente por responder pesquisas. No entanto, às vezes o processo de resgate das recompensas pode ser um pouco demorado.</p>
+            <p>Esta avaliação foi marcada como útil por 20 pessoas</p>
+            <p><strong>Resposta do desenvolvedor:</strong> Agradecemos seu feedback, Carlos! Estamos trabalhando para melhorar o processo de resgate para torná-lo mais rápido e eficiente.</p>
+        </div>
+        <div class="review">
+            <p><strong>Ana Oliveira</strong> - 8 de junho de 2024</p>
+            <p class="stars">★★★☆☆</p>
+            <p>O aplicativo é bom, mas às vezes as pesquisas disponíveis não são tão interessantes. Seria bom ter mais variedade.</p>
+            <p>Esta avaliação foi marcada como útil por 15 pessoas</p>
+            <p><strong>Resposta do desenvolvedor:</strong> Agradecemos seu comentário, Ana! Estamos constantemente trabalhando para aumentar a variedade de pesquisas disponíveis para garantir uma experiência mais envolvente para todos os usuários.</p>
+        </div>
 
-    <div class="review">
-        <p><strong>Caio Monteiro</strong> - May 30, 2024</p>
-        <p class="stars">★★★★★</p>
-        <p>Great game! It’s fun and has unique gameplay, but there are some issues with the progression system. The chest tickets are few and take a long time to recharge.</p>
-        <p>This review was marked as helpful by 227 people</p>
-    </div>
-    <div class="review">
-        <p><strong>Welington Ramos</strong> - May 30, 2024</p>
-        <p class="stars">★★★★☆</p>
-        <p>The latest games from Developer Studio have been quite "meh", but this one is amazing! Graphics and designs are excellent, and gameplay is easy.</p>
-        <p>This review was marked as helpful by 202 people</p>
-    </div>
-    <div class="review hidden">
-        <p><strong>rafitass</strong> - May 30, 2024</p>
-        <p class="stars">★★★★☆</p>
-        <p>The game is incredible! Very well made and optimized. However, I had issues connecting with mobile data and had to switch to Wi-Fi.</p>
-        <p>This review was marked as helpful by 3 people</p>
-    </div>
-    <div class="review hidden">
-        <p><strong>Carlos Pereira</strong> - May 27, 2024</p>
-        <p class="stars">★★★★★</p>
-        <p>Amazing game! Highly recommend it to everyone.</p>
-        <p>This review was marked as helpful by 50 people</p>
-    </div>
-    <div class="review hidden">
-        <p><strong>Luiz Santos</strong> - May 25, 2024</p>
-        <p class="stars">★★★★☆</p>
-        <p>Great game overall, but it crashes sometimes.</p>
-        <p>This review was marked as helpful by 15 people</p>
-    </div>
+        <div class="review hidden">
+            <p><strong>Marcos Santos</strong> - 5 de junho de 2024</p>
+            <p class="stars">★★☆☆☆</p>
+            <p>O aplicativo trava com frequência, o que é bastante irritante. Espero que isso seja corrigido em futuras atualizações.</p>
+            <p>Esta avaliação foi marcada como útil por 10 pessoas</p>
+            <p><strong>Resposta do desenvolvedor:</strong> Pedimos desculpas pelo inconveniente, Marcos. Estamos investigando o problema de travamento e trabalhando em uma solução que será implementada em breve.</p>
+        </div>
+        <div class="review hidden">
+            <p><strong>Fernanda Costa</strong> - 25 de maio de 2024</p>
+            <p class="stars">★★★★★</p>
+            <p>Adoro este aplicativo! É uma ótima maneira de ganhar prêmios enquanto ajudo empresas a melhorar seus produtos e serviços.</p>
+            <p>Esta avaliação foi marcada como útil por 25 pessoas</p>
+            <p><strong>Resposta do desenvolvedor:</strong> Ficamos felizes em saber que você está aproveitando o Opinião Premiada, Fernanda! Obrigado por contribuir para o sucesso do nosso aplicativo.</p>
+        </div>
 
-    <button id="showMoreButton" class="show-more-button" onclick="showMoreReviews()">Ver todas as avaliações</button>
-    <button id="hideButton" class="show-more-button hidden" onclick="hideReviews()">Ocultar avaliações</button>
+        <button id="showMoreButton" class="show-more-button" onclick="showMoreReviews()">Ver todas as avaliações</button>
+        <button id="hideButton" class="show-more-button hidden" onclick="hideReviews()">Ocultar avaliações</button>
+    </div>
 </div>
-        <meta name="monetag" content="e663ac962ad240ff44b6d88e3189354e">
 
 <script>
     function showMoreReviews() {
@@ -330,55 +433,15 @@
         </form>
     </div>
 </div>
-  <div class="related-games">
-    <h2>Jogos semelhantes</h2>
-    <div class="game-item">
-        <a href="https://ambercnt.com/?g=116438037&c=2" target="_blank">
-            <img src="img1900.png" alt="Game 1">
-            <p>Amber Game 1</p>
-        </a>
-    </div>
-    <div class="game-item">
-        <a href="https://example.com/game2" target="_blank">
-            <img src="img_game2.jpg" alt="Game 2">
-            <p>Game 2</p>
-        </a>
-    </div>
-    <div class="game-item">
-        <a href="https://example.com/game3" target="_blank">
-            <img src="img_game3.jpg" alt="Game 3">
-            <p>Game 3</p>
-        </a>
-    </div>
+<div id="politicasPrivacidade" style="text-decoration: underline; color: blue; cursor: pointer;">
+    Clique aqui para ler nossas políticas de privacidade.
 </div>
 
-<style>
-.related-games {
-    margin-top: 20px;
-}
-.related-games h2 {
-    font-size: 24px;
-    color: white;
-}
-.related-games .game-item {
-    display: inline-block;
-    width: 30%;
-    margin-right: 10px;
-    text-align: center;
-}
-.related-games .game-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-.related-games .game-item p {
-    margin: 10px 0;
-    color: white;
-    font-size: 18px;
-}
-</style>
-
 <script>
+document.getElementById("politicasPrivacidade").addEventListener("click", function() {
+    window.location.href = "https://www.exemplo.com/politicas-privacidade";
+});
+
     document.getElementById('review-form').addEventListener('submit', function(event) {
         event.preventDefault();
         
@@ -409,35 +472,7 @@
         document.getElementById('review-form').reset();
     });
 </script>
-<div class="telegram-support">
-    <h3 style="color: white;">Canal de Atendimento no Telegram</h3>
-    <p style="color: white;">Para suporte rápido e direto, junte-se ao nosso canal de atendimento no Telegram.</p>
-    <a href="https://t.me/photon4567" target="_blank" class="telegram-link">Entrar no Canal de Atendimento</a>
-</div>
 
-<style>
-    .telegram-support {
-        margin: 20px 0;
-        padding: 20px;
-        background-color: #0088cc; /* Cor de fundo azul */
-        border-radius: 8px;
-        text-align: center;
-    }
-    .telegram-support h3, .telegram-support p {
-        color: white; /* Letras brancas */
-    }
-    .telegram-link {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #0077b3; /* Cor de fundo azul mais escura */
-        color: white;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 16px;
-    }
-    .telegram-link:hover {
-        background-color: #005580; /* Cor de fundo azul mais escura ao passar o mouse */
-    }
-</style>
+</style>.
 </body>
 </html>
